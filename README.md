@@ -5,20 +5,42 @@ In this project, I developed a comprehensive Yield Curve Modeling tool in Micros
 # Official Source Link:
 https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month=202505
 
-# Techniques Used: 
-- Nelson-Siegel Model
-- Nelson-Siegel-Svensson Model
-- Linear Interpolation
+#  Key Objectives:
+- To model and fit the term structure of interest rates with high precision
+- To compare different methods of curve fitting and evaluate their effectiveness
+- To implement each model in Excel with user-friendly features for customization and interpretation
 
-# Key Highlights:
-- Implemented the **Nelson-Siegel** and **Nelson-Siegel-Svensson** models for yield curve fitting using Excel’s Solver to optimize model parameters.
-- Built a **Linear Interpolation** model as a benchmark for comparison against more advanced curve-fitting approaches.
-- **Visualized yield curves** dynamically across different maturities with interactive charts and user-defined inputs.
-- **Evaluated and compared model performance** based on fit accuracy and flexibility over various interest rate environments.
+# Modeling Techniques Used:
 
-# Tools: 
-Microsoft Excel, Solver, VBA (optional), Charting Tools
+**1.  Nelson-Siegel Model:**
+- Parametric model with 4 parameters: β1, β2, β3, and τ
+- Captures level, slope, and curvature of the yield curve
+- Used Solver in Excel to calibrate parameters by minimizing the error between observed and fitted yields
 
-# Outcome:
-This hands-on modeling project not only deepened my understanding of fixed-income analytics and term structure modeling but also showcased Excel’s powerful capabilities for financial modeling without relying on external tools.
+**2. Nelson-Siegel-Svensson Model:**
+- Extension of Nelson-Siegel with 6 parameters: β1, β2, β3, β4, τ₁, τ₂
+- Provides additional flexibility to model the hump or dip in long-term yields
+- Solver-based optimization to calibrate the full model and compare its performance to the standard Nelson-Siegel
 
+**3. Linear Interpolation:**
+- Constructed the yield curve by connecting known yields at specific maturities with straight lines
+- Simple, fast, and useful for short-term estimations
+- Implemented using Excel’s built-in functions with dynamic range inputs
+
+# Visualization:
+- Created dynamic charts to compare fitted curves across the three models
+- Included forward rate curves, spot rate curves, and error plots
+- Enabled interactive model selection and parameter sensitivity analysis
+
+# Outcomes & Insights:
+- Nelson-Siegel-Svensson consistently provided a better fit for complex yield structures
+- Linear interpolation was most effective for short-term, simple applications
+- Gained strong hands-on experience in financial modeling, curve fitting, and Excel-based optimization techniques
+
+# Tools & Skills Used:
+- Microsoft Excel (Advanced Formulas, Solver, Dynamic Charts)
+- Yield Curve Theory & Parametric Modeling
+- Optimization and Least-Squares Fitting Techniques
+
+# Takeaway:
+This project enhanced my quantitative finance and Excel modeling skills, particularly in the domain of interest rate modeling. It also reinforced the importance of model selection in financial decision-making, portfolio valuation, and risk management.
